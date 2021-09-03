@@ -132,7 +132,10 @@
         colnames(allDataExt) <- gsub("\\()", "", colnames(allDataExt))
         colnames(allDataExt) <- gsub("^t", "time.", colnames(allDataExt))
         colnames(allDataExt) <- gsub("^f", "freq.", colnames(allDataExt))
-        
+        colnames(allDataExt) <- gsub(",", ".", colnames(allDataExt))
+        colnames(allDataExt) <- gsub("\\(", ".", colnames(allDataExt))
+        colnames(allDataExt) <- gsub("\\)", "", colnames(allDataExt))
+
 ## The next step is to create a second, tidy data set from allDataExt that takes
 ## the average of each variable for each activity and each subject. This means
 ## we need to group our data set by subject then by activity, and then we can
