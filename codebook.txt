@@ -1,0 +1,56 @@
+Data Dictionary - Getting and Cleaning Data Course Project - Tidy Data Set
+_________________________________________________________________________________________________________________
+
+Subject
+	Subject ID identifying which subject performed the activity (range is 1 to 30)
+_________________________________________________________________________________________________________________
+
+Activity: name of activity performed
+	laying
+	sitting
+	standing
+	walking
+	walkindDownstairs
+	walkingUpstairs
+_________________________________________________________________________________________________________________
+
+Signals
+	Time Domain
+		time.BodyAccMag:
+			Estimated magnitude of body acceleration measured from the accelerometer
+		time.GravityAccMag:
+			Magnitude of gravity acceleration measured from the accelerometer
+		time.BodyAccJerkMag:
+			Magnitude of body jerk measured from the accelerometer
+		time.BodyGyroMag:
+			Magnitude of body angular velocity measured from the gyroscope
+		time.BodyGyroJerkMag:
+			Magnitude of body jerk angular velocity measured from the gyroscope
+
+	Frequency Domain	
+		freqBodyAcc.XYZ:
+			Triaxial body acceleration measured from the accelerometer (along X, Y, and Z axes)
+		freqBodyAccJerk.XYZ:
+			Triaxial body jerk measured from the accelerometer (along X, Y, and Z axes)
+		freqBodyGyro.XYZ:
+			Triaxial angular velocity measured from the gyroscope (along X, Y, and Z axes)
+		freqBodyAccMag:
+			Estimated magnitude of body acceleration measured from the accelerometer
+		freqBodyAccJerkMag:
+			Magnitude of body jerk measured from the accelerometer
+		freqBodyGyroMag:
+			Magnitude of body angular velocity measured from the gyroscope
+		freqBodyGyroJerkMag:
+			Magnitude of body jerk angular velocity measured from the gyroscope
+_________________________________________________________________________________________________________________
+
+Measurements
+	mean: Mean value
+	std: Standard deviation
+	meanFreq: Weighted average of the frequency component with largest magnitude
+	angle: Angle between two vectors
+_________________________________________________________________________________________________________________
+
+The data contained in the tidy data set "allDataMeans" contains the averages of the measurements taken for
+each subject performing a specific activity. With 30 subjects each performing 6 activities, this comes out
+to 180 total observations.
