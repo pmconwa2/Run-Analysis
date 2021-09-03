@@ -130,6 +130,9 @@
         colnames(allDataExt) <- gsub("\\()", "", colnames(allDataExt))
         colnames(allDataExt) <- gsub("^t", "time.", colnames(allDataExt))
         colnames(allDataExt) <- gsub("^f", "freq.", colnames(allDataExt))
+        colnames(allDataExt) <- gsub(",", ".", colnames(allDataExt))
+        colnames(allDataExt) <- gsub("\\(", ".", colnames(allDataExt))
+        colnames(allDataExt) <- gsub("\\)", "", colnames(allDataExt))
         
 ## The next step is to create a second, tidy data set from allDataExt that takes
 ## the average of each variable for each activity and each subject. This means
@@ -140,4 +143,4 @@
         allDataMeans <- summarize_each(allDataMeans, funs(mean))
 
 ## Now let's write our tidy data set into a file
-        write.table(allDataMeans, file = "allDataMeans.txt", row.name = FALSE)
+        write.table(allDataMeans, file = "tidyData.txt", row.name = FALSE)
